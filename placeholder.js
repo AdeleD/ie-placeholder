@@ -35,24 +35,30 @@ var _classCallCheck = function (instance, Constructor) { if (!(instance instance
       displayPlaceholder: {
         value: function displayPlaceholder() {
           this.placeholderStyle();
-          this.input.value = this.input.getAttribute("placeholder");
+
+          var placeholder = this.input.getAttribute("placeholder");
+
+          if (placeholder !== undefined && placeholder !== null && (this.input.value === null || this.input.value === "")) {
+            this.input.value = placeholder;
+          }
         },
         writable: true,
         configurable: true
       },
       attachEvents: {
         value: function attachEvents() {
+          var _this = this;
           this.input.addEventListener("click", (function (e) {
             if (e.currentTarget.value === e.currentTarget.getAttribute("placeholder")) {
               e.currentTarget.value = "";
 
-              this.normalStyle();
+              _this.normalStyle();
             }
           }).bind(this));
 
           this.input.addEventListener("onblur", (function (e) {
             if (e.currentTarget.value === "") {
-              this.placeholderStyle();
+              _this.placeholderStyle();
             }
           }).bind(this));
         },

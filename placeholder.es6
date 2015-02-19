@@ -25,11 +25,16 @@
 
     displayPlaceholder() {
       this.placeholderStyle();
-      this.input.value = this.input.getAttribute('placeholder');
+
+      var placeholder = this.input.getAttribute('placeholder');
+
+      if (placeholder !== undefined && placeholder !== null && (this.input.value === null || this.input.value === '')) {
+        this.input.value = placeholder;
+      }
     }
 
     attachEvents() {
-      this.input.addEventListener('click', function(e) {
+      this.input.addEventListener('click', (e) => {
         if (e.currentTarget.value === e.currentTarget.getAttribute('placeholder')) {
           e.currentTarget.value = '';
 
@@ -37,7 +42,7 @@
         }
       }.bind(this));
 
-      this.input.addEventListener('onblur', function(e) {
+      this.input.addEventListener('onblur', (e) => {
         if (e.currentTarget.value === '') {
           this.placeholderStyle();
         }
