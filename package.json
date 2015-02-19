@@ -1,0 +1,23 @@
+{
+  "name": "ie-placeholder",
+  "version": "0.0.0",
+  "description": "A JavaScript class to make placeholder work on IE <= 9",
+  "main": "./dest/placeholder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AdeleD/ie-placeholder.git"
+  },
+  "author": "Adèle Delamarche <adele.delamarche@gmail.com>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/AdeleD/ie-placeholder/issues"
+  },
+  "homepage": "https://github.com/AdeleD/ie-placeholder",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0"
+  }
+}
