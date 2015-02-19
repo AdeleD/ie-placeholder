@@ -6,7 +6,7 @@ var _classCallCheck = function (instance, Constructor) { if (!(instance instance
 
 /*jshint esnext:true */
 
-(function (document, window) {
+(function () {
   "use strict";
 
   function support() {
@@ -80,5 +80,5 @@ var _classCallCheck = function (instance, Constructor) { if (!(instance instance
     return Placeholder;
   })();
 
-  window.CustomEvent = Placeholder;
+  window.Placeholder = Placeholder;
 })();

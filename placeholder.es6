@@ -1,6 +1,6 @@
 /*jshint esnext:true */
 
-(function (document, window) {
+(function () {
   'use strict';
 
   function support() {
@@ -55,5 +55,5 @@
     }
   }
 
-  window.CustomEvent = Placeholder;
+  window.Placeholder = Placeholder;
 })();
